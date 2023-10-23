@@ -153,6 +153,10 @@
     <Compile Include="Migrations\202310222101384_EnableManyToManyTaskUserRelation.designer.cs">
       <DependentUpon>202310222101384_EnableManyToManyTaskUserRelation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310230742220_TaskDetailsPropertyAdded.cs" />
+    <Compile Include="Migrations\202310230742220_TaskDetailsPropertyAdded.designer.cs">
+      <DependentUpon>202310230742220_TaskDetailsPropertyAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Data\AppDbContext.cs" />
     <Compile Include="Data\Entities\Department.cs" />
@@ -276,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310222101384_EnableManyToManyTaskUserRelation.resx">
       <DependentUpon>202310222101384_EnableManyToManyTaskUserRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310230742220_TaskDetailsPropertyAdded.resx">
+      <DependentUpon>202310230742220_TaskDetailsPropertyAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

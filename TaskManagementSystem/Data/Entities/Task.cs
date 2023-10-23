@@ -9,6 +9,7 @@ namespace TaskManagementSystem.Data.Entities
     {
         public int TaskID { get; set; }
         public string Title { get; set; }
+        public string Details { get; set; } // Added task details
         public DateTime DeadlineDate { get; set; }
         public string Attachment { get; set; }
 
