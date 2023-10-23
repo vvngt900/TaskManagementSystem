@@ -20,6 +20,8 @@ namespace TaskManagementSystem.Data
         public DbSet<Task> Tasks { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<TaskStatus> TaskStatuses { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -162,6 +162,10 @@
     <Compile Include="Migrations\202310230753187_TaskStatusPropertyAdded.designer.cs">
       <DependentUpon>202310230753187_TaskStatusPropertyAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310230854267_AddTaskStatus.cs" />
+    <Compile Include="Migrations\202310230854267_AddTaskStatus.designer.cs">
+      <DependentUpon>202310230854267_AddTaskStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Data\AppDbContext.cs" />
     <Compile Include="Data\Entities\Department.cs" />
@@ -291,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310230753187_TaskStatusPropertyAdded.resx">
       <DependentUpon>202310230753187_TaskStatusPropertyAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310230854267_AddTaskStatus.resx">
+      <DependentUpon>202310230854267_AddTaskStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

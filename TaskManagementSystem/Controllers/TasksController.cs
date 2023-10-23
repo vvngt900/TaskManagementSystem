@@ -51,10 +51,12 @@ namespace TaskManagementSystem.Controllers
 
             var departments = db.Departments.ToList();
             var teamMembers = db.Users.Where(u => u.DepartmentID == 2).ToList();
+            var statuses = db.TaskStatuses.ToList();
             var viewModel = new TaskCreateViewModel
             {
                 Departments = new SelectList(departments, "DepartmentId", "Name"),
-                TeamMembers = new MultiSelectList(teamMembers, "UserId", "Username")
+                TeamMembers = new MultiSelectList(teamMembers, "UserId", "Username"),
+                Statuses = new SelectList(statuses, "StatusID", "Name")
             };
 
             return View(viewModel);
@@ -87,14 +89,16 @@ namespace TaskManagementSystem.Controllers
             if (ModelState.IsValid)
             {
                 string folderPath = Server.MapPath("~/Attachments");
-                string attachmentPath = FileUploadHelper.SaveFile(model.AttachmentFile, folderPath);
+                string attachmentPath = FileUploadHelper.SaveFile(model.Attachment, folderPath);
 
                 var task = new Task
                 {
                     Title = model.TaskTitle,
+                    Details = model.Details,
                     DeadlineDate = model.DeadlineDate,
                     Attachment = attachmentPath, // Save the attachment path
                     Department = db.Departments.Find(model.DepartmentId), // Set the Department
+                    Status = db.TaskStatuses.Find(model.StatusId),
                 };
 
                 foreach (var userId in model.SelectedTeamMembers)
@@ -113,8 +117,10 @@ namespace TaskManagementSystem.Controllers
 
             var departments = db.Departments.ToList();
             var teamMembers = db.Users.Where(u => u.DepartmentID == model.DepartmentId).ToList();
+            var statuses = db.TaskStatuses.ToList();
             model.Departments = new SelectList(departments, "DepartmentId", "Name");
             model.TeamMembers = new MultiSelectList(teamMembers, "UserID", "Username");
+            model.Statuses = new SelectList(statuses, "StatusID", "Name");
             return View(model); // Return to the form with error messages.
         }
 
