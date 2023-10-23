@@ -13,6 +13,9 @@ namespace TaskManagementSystem.Data.Entities
         public DateTime DeadlineDate { get; set; }
         public string Attachment { get; set; }
 
+        // Updated the navigation property to represent the task status.
+        public virtual TaskStatus Status { get; set; }
+
         // Add a navigation property to represent the users assigned to this task.
         public virtual ICollection<User> AssignedUsers { get; set; }
 

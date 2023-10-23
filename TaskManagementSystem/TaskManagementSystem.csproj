@@ -133,6 +133,7 @@
     <Compile Include="Controllers\TasksController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\Entities\Comment.cs" />
+    <Compile Include="Data\Entities\TaskStatus.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -156,6 +157,10 @@
     <Compile Include="Migrations\202310230742220_TaskDetailsPropertyAdded.cs" />
     <Compile Include="Migrations\202310230742220_TaskDetailsPropertyAdded.designer.cs">
       <DependentUpon>202310230742220_TaskDetailsPropertyAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310230753187_TaskStatusPropertyAdded.cs" />
+    <Compile Include="Migrations\202310230753187_TaskStatusPropertyAdded.designer.cs">
+      <DependentUpon>202310230753187_TaskStatusPropertyAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Data\AppDbContext.cs" />
@@ -283,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310230742220_TaskDetailsPropertyAdded.resx">
       <DependentUpon>202310230742220_TaskDetailsPropertyAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310230753187_TaskStatusPropertyAdded.resx">
+      <DependentUpon>202310230753187_TaskStatusPropertyAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
